@@ -139,6 +139,8 @@ Graphical interface
 
 - Url: [Cutter-v2.3.2-Linux-x86_64.AppImage](https://github.com/rizinorg/cutter/releases/download/v2.3.2/Cutter-v2.3.2-Linux-x86_64.AppImage)
 
+- Source: https://cutter.re/docs/building.html 
+sudo apt install meson
 ### r2pipe
 
 Scripting
