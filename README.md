@@ -21,6 +21,32 @@ simple, plain files, including disks, network connections, kernel drivers, proce
 It implements an advanced command line interface for moving around a file, analyzing data, disassembling, binary patching, data comparison, searching, replacing, and
 visualizing. It can be scripted with a variety of languages, including Python, Ruby, JavaScript, Lua, and Perl.
 
+<<<<<<< HEAD
+
+##### User Interface
+
+r2 has an embedded webserver and ships some basic user interfaces written in html/js. You can start them like this:
+
+- `$ r2 -c=H /bin/ls`
+
+##### Common Usage Pattern
+
+- Quickly get into an r2 shell without opening any file.
+
+  `$ r2 -`
+
+- Open a file.
+
+  `$ r2 file`
+
+- Open a file and analyze all.
+
+  `$ r2 -A file`
+
+##### Command Line
+
+=======
+
 #### User Interface
 
 r2 has an embedded webserver and ships some basic user interfaces written in html/js. You can start them like this:
@@ -39,6 +65,8 @@ Open a file and analyze all.
 
 #### Command Line
 
+> > > > > > > 93c0d6dc4da763fdb60f4ca5d5edfa4fdc26641d
+
 `> pdc@main`
 
 - List strings in data sections
@@ -52,18 +80,21 @@ Open a file and analyze all.
 
 - Enable `e scr.utf8=true` and `e scr.utf8.curvy=true` to make the outlines beautiful.
 
+- List functions
+  afl
+
 #### Disassembly
 
 - Print Disassemblr function
   `> pdf @ main`
 
-#### Debugging
-
-#### Hex Editor
+##### Hex Editor
 
 - wz: string write zero terminated string (like w + \x00)
 - `> "wz Mahir Labib Dihan"`
-- `> VV` then `> x` then `> c`
+- Visual: `> VV` then `> x` then `> c`
+
+#### Debugging
 
 ### r2pm
 
@@ -77,7 +108,7 @@ get data like exported symbols, imports, file information, cross references (xre
 #### usage
 
 - Show binary info (see iI command in r2)
-  
+
   `$ rabin2 -I a.out`
 
 ### rasm2
@@ -130,7 +161,6 @@ plugin in r2 repo to generate the pseudo C code
 
 - `> pdd@main`
 
-
 ### Cutter
 
 Graphical interface
@@ -148,6 +178,7 @@ Scripting
 ##### Installation
 
 - pip install r2pipe
+  https://r2wiki.readthedocs.io/en/latest/home/radare2-python-scripting/
 
 ##### Usage
 
@@ -155,3 +186,8 @@ Scripting
 - `r2.cmd(command)`
 - `r2.cmdj(command_to_return_json)`
 - `r2.quit()`
+
+## Entropy Analysis
+
+r2 -qfnc 'p==e 30' dropshot.exe.vir
+rahash2 -a entropy -B dropshot.exe.vir
