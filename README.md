@@ -21,6 +21,8 @@ simple, plain files, including disks, network connections, kernel drivers, proce
 It implements an advanced command line interface for moving around a file, analyzing data, disassembling, binary patching, data comparison, searching, replacing, and
 visualizing. It can be scripted with a variety of languages, including Python, Ruby, JavaScript, Lua, and Perl.
 
+<<<<<<< HEAD
+
 ##### User Interface
 
 r2 has an embedded webserver and ships some basic user interfaces written in html/js. You can start them like this:
@@ -43,6 +45,28 @@ r2 has an embedded webserver and ships some basic user interfaces written in htm
 
 ##### Command Line
 
+=======
+
+#### User Interface
+
+r2 has an embedded webserver and ships some basic user interfaces written in html/js. You can start them like this:
+`$ r2 -c=H /bin/ls`
+
+#### Common Usage Pattern
+
+Quickly get into an r2 shell without opening any file.
+`$ r2 -`
+
+Open a file.
+`$ r2 file`
+
+Open a file and analyze all.
+`$ r2 -A file`
+
+#### Command Line
+
+> > > > > > > 93c0d6dc4da763fdb60f4ca5d5edfa4fdc26641d
+
 `> pdc@main`
 
 - List strings in data sections
@@ -59,18 +83,18 @@ r2 has an embedded webserver and ships some basic user interfaces written in htm
 - List functions
   afl
 
-##### Disassembly
+#### Disassembly
 
 - Print Disassemblr function
   `> pdf @ main`
-
-##### Debugging
 
 ##### Hex Editor
 
 - wz: string write zero terminated string (like w + \x00)
 - `> "wz Mahir Labib Dihan"`
 - Visual: `> VV` then `> x` then `> c`
+
+#### Debugging
 
 ### r2pm
 
@@ -81,7 +105,7 @@ Package Manager for radare2
 A program to extract information from executable binaries, such as ELF, PE, Java CLASS, Mach-O, plus any format supported by r2 plugins. rabin2 is used by the core to
 get data like exported symbols, imports, file information, cross references (xrefs), library dependencies, and sections.
 
-##### usage
+#### usage
 
 - Show binary info (see iI command in r2)
 
